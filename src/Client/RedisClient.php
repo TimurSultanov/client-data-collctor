@@ -2,7 +2,6 @@
 
 namespace App\Client;
 
-use App\Exception\MethodNotImplementedException;
 use Redis;
 
 class RedisClient implements StorageClientInterface
@@ -41,5 +40,4 @@ class RedisClient implements StorageClientInterface
     {
         $this->redisClient->set($key, $value);
     }
-
 }
