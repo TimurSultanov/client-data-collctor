@@ -1,7 +1,7 @@
 {
   "channel": "typein",
-  "client_id": 1234,
-  "click_type": "typein",
+  "clientId": 1234,
+  "clickType": "typein",
   "pg": "www.test.de",
   "url": "https://www.test.de/page1.html?foo=bar",
   "browser": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36",
@@ -22,15 +22,15 @@
   },
   "protocol": "https",
   "rand": "3072639324.12787",
-  "user_id": "8f7b5c294c121cc34213dea2fab7e9ba",
+  "userId": "8f7b5c294c121cc34213dea2fab7e9ba",
   "ip": "212.114.206.213",
-  "session_id": 1684099044,
-  "client_info": {
-    "client_name": "Foobar",
-    "client_id": 1234,
+  "sessionId": 1684099044,
+  "clientInfo": {
+    "clientName": "Foobar",
+    "clientId": 1234,
     "vertical": "Fashion"
   },
-  "geo_location": {
+  "geoLocation": {
     "status": "success",
     "country": "Germany",
     "countryCode": "DE",
@@ -46,7 +46,7 @@
     "as": "AS8767 M-net Telekommunikations GmbH",
     "query": "212.114.206.213"
   },
-  "os": "Mac OS X",
-  "browser_name": "Mozilla",
-  "devise_type": "Desktop"
+  "os": "macOS",
+  "browserName": "Chrome",
+  "deviceType": "desktop"
 }

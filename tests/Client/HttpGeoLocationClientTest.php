@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Client;
+namespace AppTest\Client;
 
+use App\Client\HttpGeoLocationClient;
 use App\DTO\GeoLocation;
 use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
 use Symfony\Component\Serializer\SerializerInterface;
