@@ -1,0 +1,3 @@
+
+redis:
+    type: redis:7.0
