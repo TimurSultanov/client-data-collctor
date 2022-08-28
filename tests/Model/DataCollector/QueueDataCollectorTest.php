@@ -25,7 +25,7 @@ class QueueDataCollectorTest extends KernelTestCase
     private const TOPIC_NAME = 'topic_name';
     private const TEST_CLIENT_ID = 1234;
 
-    public function testCollect()
+    public function testCollect(): void
     {
         self::bootKernel();
 
