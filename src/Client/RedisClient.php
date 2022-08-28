@@ -21,6 +21,7 @@ class RedisClient implements StorageClientInterface
      * @param string $key
      *
      * @return string
+     *
      * @throws \RedisException
      */
     public function get(string $key): string
@@ -33,11 +34,12 @@ class RedisClient implements StorageClientInterface
      * @param string $value
      *
      * @return void
-     * @throws \App\Exception\MethodNotImplementedException
+     *
+     * @throws \RedisException
      */
     public function set(string $key, string $value): void
     {
-        throw new MethodNotImplementedException(__METHOD__);
+        $this->redisClient->set($key, $value);
     }
 
 }
