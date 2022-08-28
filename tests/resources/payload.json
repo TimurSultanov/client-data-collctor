@@ -1,0 +1,28 @@
+{
+  "channel": "typein",
+  "client_id": 1234,
+  "click_type": "typein",
+  "pg": "www.test.de",
+  "url": "https://www.test.de/page1.html?foo=bar",
+  "browser": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36",
+  "navigator": {
+    "appName": "Netscape",
+    "appCodeName": "Mozilla",
+    "pdfViewerEnabled": true,
+    "platform": "MacIntel"
+  },
+  "screen": {
+    "availHeight": 1415,
+    "availWidth": 2560,
+    "height": 1440,
+    "width": 2560,
+    "devicePixelRatio": 2,
+    "innerWidth": 1440,
+    "innerHeight": 768
+  },
+  "protocol": "https",
+  "rand": "3072639324.12787",
+  "user_id": "8f7b5c294c121cc34213dea2fab7e9ba",
+  "ip": "212.114.206.213",
+  "session_id": 1684099044
+}

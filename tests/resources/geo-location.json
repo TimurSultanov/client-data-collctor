@@ -1,0 +1,16 @@
+{
+  "status": "success",
+  "country": "Germany",
+  "countryCode": "DE",
+  "region": "BY",
+  "regionName": "Bavaria",
+  "city": "Munich",
+  "zip": "80331",
+  "lat": 48.1728,
+  "lon": 11.5317,
+  "timezone": "Europe/Berlin",
+  "isp": "M-net Telekommunikations GmbH",
+  "org": "M-net Telekommunikations GmbH",
+  "as": "AS8767 M-net Telekommunikations GmbH",
+  "query": "212.114.206.213"
+}
