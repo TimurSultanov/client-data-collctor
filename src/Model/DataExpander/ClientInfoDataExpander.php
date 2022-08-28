@@ -2,22 +2,22 @@
 
 namespace App\Model\DataExpander;
 
-use App\Client\ClientInfoClientInterface;
 use App\DTO\Client;
+use App\Model\Reader\ClientInfoReaderInterface;
 
 class ClientInfoDataExpander implements ClientDataExpanderInterface
 {
     /**
-     * @var \App\Client\ClientInfoClientInterface
+     * @var \App\Model\Reader\ClientInfoReaderInterface
      */
-    private ClientInfoClientInterface $clientInfoClient;
+    private ClientInfoReaderInterface $clientInfoReader;
 
     /**
-     * @param \App\Client\ClientInfoClientInterface $clientInfoClient
+     * @param \App\Model\Reader\ClientInfoReaderInterface $clientInfoReader
      */
-    public function __construct(ClientInfoClientInterface $clientInfoClient)
+    public function __construct(ClientInfoReaderInterface $clientInfoReader)
     {
-        $this->clientInfoClient = $clientInfoClient;
+        $this->clientInfoReader = $clientInfoReader;
     }
 
     /**
@@ -27,7 +27,7 @@ class ClientInfoDataExpander implements ClientDataExpanderInterface
      */
     public function expand(Client $clientDto): Client
     {
-        $clientInfoDto = $this->clientInfoClient->getClientById($clientDto->getClientId());
+        $clientInfoDto = $this->clientInfoReader->getClientById($clientDto->getClientId());
 
         return $clientDto->setClientInfo($clientInfoDto);
     }
