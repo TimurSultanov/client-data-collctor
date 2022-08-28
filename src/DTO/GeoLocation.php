@@ -18,9 +18,9 @@ class GeoLocation
 
     private string $zip;
 
-    private string $lat;
+    private float $lat;
 
-    private string $lon;
+    private float $lon;
 
     private string $timezone;
 
@@ -173,19 +173,19 @@ class GeoLocation
     }
 
     /**
-     * @return string
+     * @return float
      */
-    public function getLat(): string
+    public function getLat(): float
     {
         return $this->lat;
     }
 
     /**
-     * @param string $lat
+     * @param float $lat
      *
      * @return \App\DTO\GeoLocation
      */
-    public function setLat(string $lat): self
+    public function setLat(float $lat): self
     {
         $this->lat = $lat;
 
@@ -193,19 +193,19 @@ class GeoLocation
     }
 
     /**
-     * @return string
+     * @return float
      */
-    public function getLon(): string
+    public function getLon(): float
     {
         return $this->lon;
     }
 
     /**
-     * @param string $lon
+     * @param float $lon
      *
      * @return \App\DTO\GeoLocation
      */
-    public function setLon(string $lon): self
+    public function setLon(float $lon): self
     {
         $this->lon = $lon;
 
