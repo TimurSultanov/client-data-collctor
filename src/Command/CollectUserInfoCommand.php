@@ -3,11 +3,12 @@
 namespace App\Command;
 
 use App\Model\DataCollector\ClientDataCollectorInterface;
+use App\Model\StatisticCollector\StatisticsCollectorInterface;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
-class CollectUserInfo extends Command
+class CollectUserInfoCommand extends Command
 {
     /**
      * @var \App\Model\DataCollector\ClientDataCollectorInterface
@@ -15,11 +16,20 @@ class CollectUserInfo extends Command
     private ClientDataCollectorInterface $clientDataCollector;
 
     /**
-     * @param \App\Model\DataCollector\ClientDataCollectorInterface $clientDataCollector
+     * @var \App\Model\StatisticCollector\StatisticsCollectorInterface
      */
-    public function __construct(ClientDataCollectorInterface $clientDataCollector)
-    {
+    private StatisticsCollectorInterface $statisticsCollector;
+
+    /**
+     * @param \App\Model\DataCollector\ClientDataCollectorInterface $clientDataCollector
+     * @param \App\Model\StatisticCollector\StatisticsCollectorInterface $statisticsCollector
+     */
+    public function __construct(
+        ClientDataCollectorInterface $clientDataCollector,
+        StatisticsCollectorInterface $statisticsCollector
+    ) {
         $this->clientDataCollector = $clientDataCollector;
+        $this->statisticsCollector = $statisticsCollector;
 
         parent::__construct();
     }
@@ -38,7 +48,8 @@ class CollectUserInfo extends Command
      */
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
-        $this->clientDataCollector->collect();
+        $processingStatsCollection = $this->clientDataCollector->collect();
+        $this->statisticsCollector->saveData($processingStatsCollection);
 
         return self::SUCCESS;
     }
