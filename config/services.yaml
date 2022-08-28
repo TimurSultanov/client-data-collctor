@@ -12,10 +12,11 @@ services:
         autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
         bind:
             $googleProjectId: '%env(resolve:GOOGLE_PROJECT_ID)%'
+            $redisClient: '@snc_redis.default'
             App\Model\Reader\ClientInfoReaderInterface: '@App\Model\Reader\ClientInfoReader'
             App\Client\GeoLocationClientInterface: '@App\Client\HttpGeoLocationClient'
             App\Model\DataCollector\ClientDataCollectorInterface: '@App\Model\DataCollector\QueueDataCollector'
-            App\Model\StatisticCollector\StatisticsCollectorInterface: '@App\Model\StatisticCollector\ProcessingStatisticsCollector'
+            App\Model\StatisticsCollector\StatisticsCollectorInterface: '@App\Model\StatisticsCollector\ProcessingStatisticsCollector'
             App\Client\QueueClientInterface: '@App\Client\PubSubClient'
 
     # makes classes in src/ available to be used as services
@@ -49,6 +50,6 @@ services:
         arguments:
             $dataSetId: 'dataset_id'
 
-    App\Model\StatisticCollector\ProcessingStatisticsCollector:
+    App\Model\StatisticsCollector\ProcessingStatisticsCollector:
         arguments:
             $storageClient: '@App\Client\RedisClient'

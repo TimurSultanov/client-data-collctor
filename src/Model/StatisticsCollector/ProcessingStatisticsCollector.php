@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Model\StatisticCollector;
+namespace App\Model\StatisticsCollector;
 
 use App\Client\StorageClientInterface;
 use App\DTO\ProcessingStatsCollection;

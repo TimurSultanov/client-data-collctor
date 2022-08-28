@@ -3,7 +3,7 @@
 namespace App\Command;
 
 use App\Model\DataCollector\ClientDataCollectorInterface;
-use App\Model\StatisticCollector\StatisticsCollectorInterface;
+use App\Model\StatisticsCollector\StatisticsCollectorInterface;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
@@ -16,13 +16,13 @@ class CollectUserInfoCommand extends Command
     private ClientDataCollectorInterface $clientDataCollector;
 
     /**
-     * @var \App\Model\StatisticCollector\StatisticsCollectorInterface
+     * @var \App\Model\StatisticsCollector\StatisticsCollectorInterface
      */
     private StatisticsCollectorInterface $statisticsCollector;
 
     /**
      * @param \App\Model\DataCollector\ClientDataCollectorInterface $clientDataCollector
-     * @param \App\Model\StatisticCollector\StatisticsCollectorInterface $statisticsCollector
+     * @param \App\Model\StatisticsCollector\StatisticsCollectorInterface $statisticsCollector
      */
     public function __construct(
         ClientDataCollectorInterface $clientDataCollector,
